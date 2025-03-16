@@ -1,22 +1,28 @@
-1. npm create hono@latest
-2. npm run dev -> backend is running
-3. take the neondb url and generate connection pool
-    url from prisma acclerate
-4. npm i prisma
-5. npx prisma init
-6. npx prisma migrate dev --name (anyname)
-7. npx prisma generate --no-engine  //generate User and Todo clients
-8. npm install @prisma/extension-accelerate
-9. Use hono/jwt library to generate json tokens (since jsonwebtoken 
-    doesnot work in cloudflare environments)
-10. cloudflare link : https://backend.kaptaanjacksparrow106.workers.dev/
-11. Make a common directory and put all the common files of frontend and backend
-    in that folder. Publish the file in npm, then export it in the backend and frontend
+# 📝 Medium Clone  
 
-12. create an .npmignore file and add src there
-13. npm login
+A **Medium-like blogging platform** built with modern web technologies for seamless writing and reading experiences.  
 
-14. npm i @manish_iitg/medium-commonfiles --registry=https://registry.npmjs.org/
-    in both frontend and backend
-15. 
+## 🚀 Features  
+- 🏗 **Modern Tech Stack** – TypeScript, React.js, Hono, Cloudflare  
+- 🎨 **Responsive UI** – Tailwind CSS for a sleek design  
+- 📝 **Rich Blogging Experience** – Create, edit, and manage blogs easily  
+- 🔐 **Secure Authentication** – JWT-based authentication  
+- ⚡ **High Performance** – Powered by Cloudflare and Hono  
+- 🗄 **Database Management** – Prisma ORM for structured data handling  
 
+---
+
+## 🛠️ Tech Stack  
+| Technology  | Purpose  |
+|-------------|------------------------------|
+| **React.js (TypeScript)**  | Frontend framework |
+| **Hono** | Lightweight backend framework |
+| **Zod** | Schema validation |
+| **Cloudflare** | Edge computing & deployment |
+| **Tailwind CSS** | UI styling |
+| **Prisma** | Database ORM |
+
+---
+
+## 🚀 Happy Blogging! 🎉
+This is the first version of the website. With time new features will be added. Let me know if you want any changes! 🚀
