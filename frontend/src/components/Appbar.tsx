@@ -2,10 +2,11 @@ import { Link } from "react-router-dom"
 import Icon from "./Icon"
 
 interface AppbarProps{
-    authorname: string
+    username: string
 }
 
 export default function Appbar(props: AppbarProps){
+    
     return <div className="border-b border-slate-300 px-4 py-2 items-center">
         <div className="flex justify-between items-center">
             <Link to={"/blogs"}>
@@ -19,7 +20,7 @@ export default function Appbar(props: AppbarProps){
                         New
                     </button>
                 </Link>
-                <Icon author={props.authorname}/>
+                <Icon author={props.username}/>
             </div>
         </div>
     </div>

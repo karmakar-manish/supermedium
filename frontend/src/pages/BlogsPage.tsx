@@ -6,9 +6,10 @@ import {AllBlogSkeleton} from "../components/Skeleton";
 
 function Blogs(){
     const {loading, blogs} = useBlogs()
-   
+    const username = JSON.parse(localStorage.getItem("token") || "").username
+    
     return <div>
-        <Appbar authorname = {"Yanish"}/>
+        <Appbar username = {username}/>
         {loading?(
             <div><AllBlogSkeleton/><AllBlogSkeleton/><AllBlogSkeleton/><AllBlogSkeleton/></div>
         ): (

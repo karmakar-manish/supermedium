@@ -48,7 +48,8 @@ userRouter.post("/signup", async(c)=>{
       const token = await sign({id: user.id}, c.env.JWT_SECRET)
       
       return c.json({
-        jwt: token
+        jwt: token,
+        username: user.name
       })
     }catch(err)
     {
@@ -98,9 +99,11 @@ userRouter.post("/signup", async(c)=>{
   
     //return the jwt token
     const token = await sign({id: user.id}, c.env.JWT_SECRET)
-  
+    
+    //send the jwt token and username in the response to frontend
     return c.json({
-      jwt: token
+      jwt: token,
+      username: user.name
     })
   })
   

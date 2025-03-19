@@ -12,11 +12,11 @@ export default function Blog() {
         id: id || "",
     });
 
+    const username = JSON.parse(localStorage.getItem("token") || "").username
    
     return (
-        
         <div>
-            <Appbar authorname="Tumar" />
+            <Appbar username={username} />
             {loading ? (
                 <SingleBlogSkeleton/>
             ) : (

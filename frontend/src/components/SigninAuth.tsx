@@ -23,9 +23,12 @@ function SigninAuth(){
                 password: postInputs.password
             })
 
-            const jwt = response.data
-            //store the jwt in localstorage
-            localStorage.setItem("token", JSON.stringify(jwt))
+            const token = {
+                jwt: response.data.jwt,
+                username: response.data.username
+            }
+            //store the jwt and username in localstorage
+            localStorage.setItem("token", JSON.stringify(token))
             navigate("/blogs")
             
         }catch(err)

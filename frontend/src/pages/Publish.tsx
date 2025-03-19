@@ -10,8 +10,11 @@ export default function Publish(){
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
 
+    const username = JSON.parse(localStorage.getItem("token") || "").username
+
     return <div>
-        <Appbar authorname="Manish"/>
+        <Appbar username={username}/>
+        
         <div className="flex justify-center">
             <div className="flex flex-col justify-center py-10 w-2xl items-center gap-5">
                 <TitleComponent onChange={(e)=>{
